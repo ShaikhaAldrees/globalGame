@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+<title> game </title>
+<meta charset="UTE-8" />
+<link rel="stylesheet" href="style.css"/>
+<style>
+	
+</style>
+</head>
+<body>
+<h3>Since how long are you not feeling well?</h3>
+<img src="doctor2.jpg"height="500"/>
+<a href=""><h3>looking for her mom</h3> </a>
+<button onclick="play();">Relax</button> 
+	<audio id="ff">
+		<source  src="music.mp3" type="audio/mpeg">
+	</audio>
+		<button id="breathButton" conClick="setClicked()"> Deep Breath </button>
+	<script>
+		var clicked = false;
+		
+		function play(){
+			var aduio = document.getElimintById("ff");
+			aduio.play();
+			
+		}
+		
+		function randomNumber(min, max) { 
+			return Math.random() * (max - min) + min;
+		} 
+
+		function changeButton(){
+			var button = document.getElementById("breathButton");
+			button.style.position = "absolute";
+			var positionOne = ["100px", "100px"];
+			var positionTwo = ["250px", "300px"];
+			var positionThree = ["400px", "200px"];
+			
+			var positions = [positionOne, positionTwo, positionThree];
+			
+			/*
+			positions.push(positionOne);
+			positions.push(positionTwo);
+			positions.push(positionThree);
+			*/
+			/*
+			while(!clicked){
+				
+				//write a code here that takes the button and change its position top and left randomly
+				var arrayNum = Math.floor(randomNumber(0, 2));
+				button.style.top = positions[arrayNum][0];
+				button.style.left = positions[arrayNum][1];
+				
+			}*/
+		}
+		
+		function setClicked(){
+			clicked = true;
+			//
+		}
+		
+		changeButton();
+	</script>
+</body> 
+</html>
